@@ -1,0 +1,8 @@
+<a (click)="goBack()" class="btn btn-sm btn-info">Back</a>
+<a (click)="goAbout()" class="btn btn-sm btn-info">About</a>
+<div *ngIf="user">
+  <h1>
+    {{user.name}}
+    <small>{{user.username}}</small>
+  </h1>
+</div>

@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+footer .navbar {
+    min-height: 30px;
+}
+
+footer .navbar .copyright {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 15px;
+}

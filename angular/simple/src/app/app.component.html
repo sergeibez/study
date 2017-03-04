@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<header class="header">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <a  class="navbar-brand" routerLink="/">{{title}}</a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
+          <li routerLinkActive="active"><a routerLink="/user">Users</a></li>
+          <li routerLinkActive="active"><a routerLink="/about">About</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <nav class="navbar navbar-default navbar-fixed-bottom text-center">
+    <span class="copyright text-muted">Copyright &copy 2017</span>
+  </nav>
+</footer>
