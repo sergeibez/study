@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { userRouting } from "./users.routing";
-import { UsersComponent } from "./users.component";
+import { UsersSectionComponent } from "./section/users-section.component";
 import { UserListMainComponent } from "./user-list/main/user-list-main.component";
 import { UserListGridComponent } from "./user-list/grid/user-list-grid.component";
 import { UserListDetailsComponent } from "./user-list/details/user-list-details.component";
@@ -14,7 +14,7 @@ import { UserResolve } from "./user.resolve-service";
 
 @NgModule({
     declarations: [
-        UsersComponent,
+        UsersSectionComponent,
         UserListMainComponent,
         UserListGridComponent,
         UserListDetailsComponent,

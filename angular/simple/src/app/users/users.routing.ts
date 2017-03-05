@@ -1,15 +1,15 @@
 import { ModuleWithProviders } from "@angular/core";
 import { RouterModule } from "@angular/router";
+import { UsersSectionComponent } from "./section/users-section.component";
 import { UserDetailsComponent } from "./user-details/user-details.component";
 import { UserListMainComponent } from "./user-list/main/user-list-main.component";
-import { UsersComponent } from "./users.component";
 import { UsersResolve } from "./users-resolve.service";
 import { UserResolve } from "./user.resolve-service";
 
 const userRoutes = [
     {
         path: '',
-        component: UsersComponent,
+        component: UsersSectionComponent,
         children: [
             {
                 path: '',
