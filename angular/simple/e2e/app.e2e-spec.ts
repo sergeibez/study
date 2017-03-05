@@ -1,4 +1,4 @@
-import { SimplePage } from './app.po';
+import { SimplePage } from "./app.po";
 
 describe('simple App', () => {
   let page: SimplePage;
@@ -9,6 +9,6 @@ describe('simple App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Simple App');
   });
 });
