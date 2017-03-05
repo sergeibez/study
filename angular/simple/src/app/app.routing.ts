@@ -11,8 +11,8 @@ const appRoutes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'user',
-        loadChildren: 'app/users/user.module#UserModule'
+        path: 'users',
+        loadChildren: 'app/users/users.module#UsersModule'
     },
     {path: 'about', component: AboutComponent},
     {path: '**', component: NotFoundComponent},

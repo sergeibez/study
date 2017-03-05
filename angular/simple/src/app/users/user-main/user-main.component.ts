@@ -26,6 +26,7 @@ export class UserMainComponent implements OnInit {
     }
 
     onUserCreated(event) {
+        console.log("UserMainComponent.onUserCreated")
         this.service.addUser(event.user);
     }
 }
