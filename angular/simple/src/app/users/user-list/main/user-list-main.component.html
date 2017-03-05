@@ -1,0 +1,10 @@
+<div>
+  <div class="col-sm-4">
+    <user-list-grid [users]="users" [activeUser]="activeUser" (userSelected)="selectUser($event)"></user-list-grid>
+    <user-list-form (userCreated)="onUserCreated($event)"></user-list-form>
+  </div>
+
+  <div class="col-sm-8">
+    <user-list-details [user]="activeUser"></user-list-details>
+  </div>
+</div>

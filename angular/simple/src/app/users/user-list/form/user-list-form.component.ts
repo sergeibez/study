@@ -1,12 +1,12 @@
 import { Component, Output, EventEmitter } from "@angular/core";
-import { User } from "../../shared/models/user";
+import { User } from "../../../shared/models/user";
 
 @Component({
-    selector: 'user-form',
-    templateUrl: './user-form.component.html',
-    styleUrls: ['./user-form.component.css']
+    selector: 'user-list-form',
+    templateUrl: './user-list-form.component.html',
+    styleUrls: ['./user-list-form.component.css']
 })
-export class UserFormComponent {
+export class UserListFormComponent {
     @Output() userCreated = new EventEmitter();
 
     newUser: User = new User();

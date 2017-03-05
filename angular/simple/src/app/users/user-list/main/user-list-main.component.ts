@@ -1,13 +1,13 @@
 import { Component, OnInit } from "@angular/core";
-import { User } from "../../shared/models/user";
-import { UserService } from "../../shared/services/user.service";
+import { User } from "../../../shared/models/user";
+import { UserService } from "../../../shared/services/user.service";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-    selector: 'user-main',
-    templateUrl: './user-main.component.html'
+    selector: 'user-list-main',
+    templateUrl: './user-list-main.component.html'
 })
-export class UserMainComponent implements OnInit {
+export class UserListMainComponent implements OnInit {
     users: User[];
 
     activeUser: User;
@@ -26,7 +26,7 @@ export class UserMainComponent implements OnInit {
     }
 
     onUserCreated(event) {
-        console.log("UserMainComponent.onUserCreated")
+        console.log("UserMainComponent.onUserCreated");
         this.service.addUser(event.user);
     }
 }
