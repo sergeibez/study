@@ -1,9 +1,9 @@
 <div class="simple-app" *ngIf="user">
-  <h2>{{user.name}}
-    <small>{{user.username}}</small>
+  <h2>{{user.first_name}}
+    <small>{{user.last_name}}</small>
   </h2>
 
-  <input class="form-control" [(ngModel)]="user.name"/>
+  <input class="form-control" [(ngModel)]="user.first_name"/>
 
   <a [routerLink]="['/users', user.id]">Details</a>
 </div>

@@ -18,7 +18,7 @@ export class UserListMainComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.route.data.forEach((data: {users: User[]}) => this.users = data.users);
+        this.users = this.route.snapshot.data['users'];
     }
 
     selectUser(event) {

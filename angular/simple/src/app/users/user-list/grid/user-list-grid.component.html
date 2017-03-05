@@ -3,7 +3,7 @@
     <li class="list-group-item" *ngFor="let user of users"
         (click)="selectUser(user)"
         [class.active]="user === activeUser">
-      {{user.name}} ({{user.username}})
+      {{user.first_name}} {{user.last_name}}
     </li>
   </ul>
 </div>

@@ -15,9 +15,7 @@ export class UserDetailsComponent implements OnInit{
     }
 
     ngOnInit(): void {
-        this.route.data.forEach((data: { user: User }) => {
-            this.user = data.user;
-        })
+        this.user = this.route.snapshot.data['user'];
     }
 
     goBack() {

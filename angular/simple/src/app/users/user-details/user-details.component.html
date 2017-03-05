@@ -1,8 +1,9 @@
-<a (click)="goBack()" class="btn btn-sm btn-info">Back</a>
-<a (click)="goAbout()" class="btn btn-sm btn-info">About</a>
+
 <div *ngIf="user">
   <h1>
-    {{user.name}}
-    <small>{{user.username}}</small>
+    {{user.first_name}}
+    <small>{{user.last_name}}</small>
   </h1>
 </div>
+<a (click)="goBack()" class="btn btn-sm btn-info">Back</a>
+<a (click)="goAbout()" class="btn btn-sm btn-info">About</a>

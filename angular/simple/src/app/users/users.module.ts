@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+
 import { userRouting } from "./users.routing";
 import { UsersSectionComponent } from "./section/users-section.component";
 import { UserListMainComponent } from "./user-list/main/user-list-main.component";
@@ -11,6 +12,10 @@ import { UserDetailsComponent } from "./user-details/user-details.component";
 import { UserService } from "../shared/services/user.service";
 import { UsersResolve } from "./users-resolve.service";
 import { UserResolve } from "./user.resolve-service";
+
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/catch";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
     declarations: [
@@ -24,6 +29,7 @@ import { UserResolve } from "./user.resolve-service";
     imports: [
         CommonModule,
         FormsModule,
+        HttpModule,
         userRouting
     ],
     providers: [
