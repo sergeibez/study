@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 
 import { userRouting } from "./users.routing";
 import { UsersSectionComponent } from "./section/users-section.component";
@@ -15,7 +16,6 @@ import { UserResolve } from "./user.resolve-service";
 
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
-import {HttpModule} from "@angular/http";
 
 @NgModule({
     declarations: [
