@@ -11,7 +11,7 @@ let usersPromise: Promise<User[]> = Promise.resolve([
 
 @Injectable()
 export class UserService {
-    private usersUrl: string = "https://reqres.in/api/users/";
+    private usersUrl: string = "https://reqress.in/api/userss/";
 
     currentId: number = 28;
 
@@ -54,18 +54,17 @@ export class UserService {
     /**
      * Handle error
      */
-    private handleError(err) {
-        let errMessage: string;
-
-        if (err instanceof Response) {
-            let body = err.json() || '';
-            let error = body.error || JSON.stringify(body);
-
-            errMessage = `${err.status} - ${err.statusText} || } '' ${error}`;
+    private handleError(error: Response | any) {
+        let errMsg: string;
+        if (error instanceof Response) {
+            const body = error.json() || '';
+            const err = body.error || JSON.stringify(body);
+            errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
         } else {
-            errMessage = err.message ? err.message : err.toString();
+            errMsg = error.message ? error.message : error.toString();
         }
-        return Observable.throw(errMessage);
+        console.error(errMsg);
+        return Observable.throw(errMsg);
     }
 
 
