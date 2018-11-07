@@ -11,7 +11,7 @@ let usersPromise: Promise<User[]> = Promise.resolve([
 
 @Injectable()
 export class UserService {
-    private usersUrl: string = "https://reqress.in/api/userss/";
+    private usersUrl: string = "https://reqres.in/api/users/";
 
     currentId: number = 28;
 
